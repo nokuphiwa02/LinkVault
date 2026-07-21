@@ -1,0 +1,9 @@
+.navTitle {
+ width: 94%;
+ display: flex;
+ align-items: center;
+ padding-left: 50px;
+ background-color: pink;
+ border:  solid black;
+}
+
