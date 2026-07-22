@@ -1,33 +1,84 @@
-import styles from "./AddLinkForm.module.css";
+import  "./AddLinkForm.module.css";
+import React, { useState } from 'react'
+import { Input } from '../Input/Input'
+import styles from './AddLinkForm.module.css'
+import type { RowProps } from "../types/types";
 
-export const AddLinkForm = () => {
+type AddLinkFormProps ={
+  onSave: (link:RowProps ) =>void
+
+}
+ 
+export const AddLinkForm:React.FC<AddLinkFormProps>  = ({onSave}) => {
+  const [title, setTitle] = useState('');
   
-  return (
-    <div className={styles.addLink}>
-      <div className={styles.linkTi}>
-        <label>Title:</label>
-        <input type="text" alt="Tittle" placeholder="write your tittle" />
-      </div>
+  const [url, setUrl] = useState('');
+  
+  const [description, setDescription] = useState('');
+  
+  const [tags, setTags] = useState(''); 
+  
+  
+  const handleInputChange_title=(event: React.ChangeEvent<HTMLInputElement> ) =>{
+  setTitle (event.target.value);
+  }
+  
+  const handleInputChange_url=(event: React.ChangeEvent<HTMLInputElement> ) =>{
+  setUrl (event.target.value);
+  }
+  
+  const handleInputChange_description=(event: React.ChangeEvent<HTMLInputElement> ) =>{
+  setDescription (event.target.value);
+  }
+  const handleInputChange_tags=(event: React.ChangeEvent<HTMLInputElement> ) =>{
+  setTags (event.target.value);
+  }
+  
+  // const handleSubmit = () => {
+  //   onSave (title ,url , description, tags)
+  // }
+  
+  function addLink(){
+  
+      return(<></>)
+  }
+  
+return(<div >
+   <div className={styles.addLink}>
+    < Input 
+      label='title:'
+      value={title}
+      placeholder='write your tittle'
+    onChange= { handleInputChange_title }/> 
 
-      <div className={styles.linkUrl}>
-        <label>url:</label>
-        <input type="text" alt="Tittle" placeholder="paste your link" />
-      </div>
+    < Input 
+     label= 'url:'
+      value={url}
+      placeholder='write your tittle'
+      onChange= { handleInputChange_url }/>
 
-      <div className={styles.linkDiscr}>
-        <label>Discription:</label>
-        <textarea
-          className="Discription"
-          placeholder="write your Discription"
-        ></textarea>
-      </div>
 
-      <div className={styles.linkTag}>
-        <label>Tags:</label>
-        <input type="text" alt="Tittle" placeholder="write your tag" />
+      < Input 
+      label= 'description:'
+      value={description}
+      placeholder='write your tittle'
+      onChange= { handleInputChange_description}/>
+
+      < Input 
+      label= 'tags:'
+      value={tags}
+      placeholder='write your tittle'
+      onChange= { handleInputChange_tags}/>                              
+
+      <button onClick= {addLink}
+        className= {styles.btnAdd} >
+        addLink
+      </button>
       </div>
-      <button className={styles.btnAdd}>addLink</button>
-    </div>
-  );
-};
+       
+
+
+</div>);
+
+}
 export default AddLinkForm;

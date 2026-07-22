@@ -11,7 +11,7 @@ interface InputProps{
 
 }
 
-export const Input:React.FC<InputProps> = ({label ,placeholder, value, onChange , style}) => {
+export const Input :React.FC<InputProps> = ({label ,placeholder, value, onChange , style}) => {
     return (
         <div>
             <label htmlFor="">{label}</label>
