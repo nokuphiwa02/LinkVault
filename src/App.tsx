@@ -1,5 +1,5 @@
 import { Navbar} from './Navbar/Navbar'
-import  { AddLinkForm } from './addLinkForm/addLinkForm'
+import  { AddLinkForm } from './addLinkForm/AddLinkForm'
 
 import './App.css'
 

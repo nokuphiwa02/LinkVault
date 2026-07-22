@@ -1,8 +1,8 @@
 import styles from "./AddLinkForm.module.css";
 
 export const AddLinkForm = () => {
+  
   return (
-
     <div className={styles.addLink}>
       <div className={styles.linkTi}>
         <label>Title:</label>
@@ -26,8 +26,7 @@ export const AddLinkForm = () => {
         <label>Tags:</label>
         <input type="text" alt="Tittle" placeholder="write your tag" />
       </div>
-       < button className={styles.btnSave}>save</button>
-      
+      <button className={styles.btnAdd}>addLink</button>
     </div>
   );
 };
