@@ -3,31 +3,30 @@
   flex-direction: column;
   gap: 10px;
   background-color: pink;
-  width: 94%;
-  height: 50vw;
+  width: 95,5%;
   padding-left: 50px;
   padding-top: 50px;
   border: solid black;
 }
 
-.linkTi{
-    font-style: normal;
-    font-weight: bold;
+.linkTi {
+  font-style: normal;
+  font-weight: bold;
 }
 
-.linkUrl{
-    font-style: normal;
-    font-weight: bold;
+.linkUrl {
+  font-style: normal;
+  font-weight: bold;
 }
-.linkDiscr{
-    font-style: normal;
-    font-weight: bold;
+.linkDiscr {
+  font-style: normal;
+  font-weight: bold;
 }
-.linkTag{
-    font-style: normal;
-    font-weight: bold;
+.linkTag {
+  font-style: normal;
+  font-weight: bold;
 }
-.btnAdd{
+.btnAdd {
   width: 100px;
   height: 40px;
   margin-left: 150px;
@@ -36,4 +35,3 @@
   color: pink;
   cursor: pointer;
 }
-

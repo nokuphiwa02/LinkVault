@@ -3,6 +3,8 @@ import  { AddLinkForm } from './addLinkForm/AddLinkForm'
 import './App.css'
 import { type RowProps } from './types/types'
 import { useState } from 'react'
+import { ListLinks } from './Row/ListLinks'
+// import styles from './App.css'
 
 
 
@@ -16,9 +18,11 @@ function App(){
 
   return (
     <>
+    <div className='container'>
       <Navbar/>
       <AddLinkForm onSave={add}/>
-      
+      <ListLinks links={links} />
+      </div>
     </>
   )
 }

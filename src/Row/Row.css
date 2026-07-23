@@ -1,0 +1,17 @@
+tr{
+font-size: x-large;
+font-weight: bolder;
+padding: 50px 50px;
+border: 10px solid black;
+}
+
+links{
+    font-size: x-large;
+    gap: 80px;
+    
+}
+
+button{
+    gap: 30px;
+    
+}
