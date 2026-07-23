@@ -17,7 +17,21 @@ export const AddLinkForm:React.FC<AddLinkFormProps>  = ({onSave}) => {
   const [description, setDescription] = useState('');
   
   const [tags, setTags] = useState(''); 
-  
+
+  const handleSave = () =>  {
+    const newLink:RowProps= {
+      id: Date.now(),
+      title,
+      url,
+      description ,
+      tags, 
+    }
+    onSave(newLink)
+    setTitle('');
+    setUrl('');
+    setDescription('');
+    setTags('');
+  }
   
   const handleInputChange_title=(event: React.ChangeEvent<HTMLInputElement> ) =>{
   setTitle (event.target.value);
@@ -38,10 +52,7 @@ export const AddLinkForm:React.FC<AddLinkFormProps>  = ({onSave}) => {
   //   onSave (title ,url , description, tags)
   // }
   
-  function addLink(){
-  
-      return(<></>)
-  }
+
   
 return(<div >
    <div className={styles.addLink}>
@@ -70,9 +81,9 @@ return(<div >
       placeholder='write your tittle'
       onChange= { handleInputChange_tags}/>                              
 
-      <button onClick= {addLink}
+      <button onClick={handleSave}
         className= {styles.btnAdd} >
-        addLink
+        Add Link
       </button>
       </div>
        
