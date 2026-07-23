@@ -23,7 +23,7 @@ export const Row:React.FC<RowProps> = ({title ,url ,description, tags}) => {
         </td>
         <td>
             <button>
-            View
+            update
             </button>
              <button>
              Edit
@@ -32,7 +32,6 @@ export const Row:React.FC<RowProps> = ({title ,url ,description, tags}) => {
             Delete
             </button>
         </td>
-
       </tr>
    </>
   )
