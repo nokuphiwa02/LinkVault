@@ -1,0 +1,42 @@
+th{
+  font-size: large;
+  font-weight: bolder;
+  padding: 50px 50px;
+  gap: 100px;
+  height:100px;
+  width: 100%;
+  /* border: 5px solid black; */
+}
+
+.link1 {
+  width: 15vw;
+  /* border: 5px solid red;
+  background-color: purple; */
+
+}
+.link2{
+ width: 20vw;
+ height: 30px;
+ /* border: 5px solid green;
+  background-color: red;
+  */
+}
+
+.link3{
+ width: 25vw;
+ /* border: 5px solid blue;
+  background-color: yellow; */
+}
+
+
+.link4{
+ width: 15vw;
+ /* border: 5px solid yellow;
+background-color: lime; */
+}
+
+.btn {
+  width: 25vw;
+  /* border: 5px solid violet;
+  background-color: grey; */
+}

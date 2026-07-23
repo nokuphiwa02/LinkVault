@@ -1,5 +1,6 @@
 import React from 'react'
 import  {type RowProps } from '../types/types'
+import './Row.module.css'
 
 
 
