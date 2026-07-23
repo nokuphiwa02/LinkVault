@@ -68,21 +68,21 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({ onSave }) => {
         <Input
           label="url:"
           value={url}
-          placeholder="write your tittle"
+          placeholder="type/paste your link"
           onChange={handleInputChange_url}
         />
 
         <Input
           label="description:"
           value={description}
-          placeholder="write your tittle"
+          placeholder="write your description"
           onChange={handleInputChange_description}
         />
 
         <Input
           label="tags:"
           value={tags}
-          placeholder="write your tittle"
+          placeholder="write your tag"
           onChange={handleInputChange_tags}
         />
 

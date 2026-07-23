@@ -13,6 +13,15 @@ export const ListLinks:React.FC<ListLinksProps> = ({links}) => {
      <th>
      Title
      </th>
+      <th>
+    url
+     </th>
+      <th>
+     description
+     </th>
+      <th>
+     tags
+     </th>
      <th>
         Buttons
      </th>
