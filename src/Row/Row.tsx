@@ -21,10 +21,7 @@ export const Row:React.FC<RowProps> = ({title ,url ,description, tags}) => {
         <td >
             {tags}
         </td>
-        <td>
-            <button>
-            update
-            </button>
+        <td  >
              <button>
              Edit
             </button>

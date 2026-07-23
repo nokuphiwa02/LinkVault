@@ -10,12 +10,9 @@ th{
 
 .link1 {
   width: 15vw;
-  
-
 }
 .link2{
  width: 20vw;
- height: 30px;
 
 }
 
@@ -32,6 +29,6 @@ th{
 
 .btn {
   width: 25vw;
-  gap: 30px;
+  gap: 50px;
  
 }

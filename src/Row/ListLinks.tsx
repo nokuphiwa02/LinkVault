@@ -28,7 +28,7 @@ export const ListLinks:React.FC<ListLinksProps> = ({links}) => {
      </th>
 
      <th className={styles.btn}>
-        Buttons
+     Actions
      </th>
     </thead>
     <tbody>
