@@ -10,10 +10,25 @@ import { ListLinks } from './Row/ListLinks'
 
 function App(){
 
-  const [links, setLinks] =useState <RowProps[]>([])
+  const [links, setLinks] =useState<RowProps[]>(()=>{
+    try {
+      const savedLinks = localStorage.getItem('links')
+      return savedLinks ? JSON.parse(savedLinks) : []
+    } catch (error) {
+      console.log(error)
+      return []
+    }
+  })
 
   const add= (newLink: RowProps) =>{ 
-    setLinks([...links, newLink])
+    setLinks((prevLinks)=>{
+      const currentArray = Array.isArray(prevLinks) ? prevLinks: []
+      const updatedArray = [...currentArray, newLink]
+      localStorage.setItem('links',JSON.stringify( updatedArray))
+      return updatedArray
+    })
+   
+
   }
 
   

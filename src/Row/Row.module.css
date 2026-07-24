@@ -1,34 +1,40 @@
 th{
   font-size: large;
   font-weight: bolder;
-  padding: 50px 50px;
+  padding: 50px ;
   gap: 100px;
   height:100px;
   width: 100%;
+  flex-wrap: wrap;
  
+}
+td{
+   padding: 50px ;
+  gap: 100px;
 }
 
 .link1 {
   width: 15vw;
+  /* border: 5PX solid red; */
 }
 .link2{
  width: 20vw;
-
+/* border: 5PX solid red; */
 }
 
 .link3{
  width: 25vw;
- 
+ /* border: 5PX solid red; */
 }
 
 
 .link4{
  width: 15vw;
-
+/* border: 5PX solid red; */
 }
 
 .btn {
   width: 25vw;
   gap: 50px;
- 
+ /* border: 5PX solid red; */
 }
