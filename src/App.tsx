@@ -27,9 +27,12 @@ function App(){
       localStorage.setItem('links',JSON.stringify( updatedArray))
       return updatedArray
     })
-   
-
   }
+
+   const Delete= (id: number)=>
+   setLinks((links.filter(link=> link.id !==id))
+       
+   )
 
   
 
@@ -37,8 +40,8 @@ function App(){
     <>
     <div className='container'>
       <Navbar/>
-      <AddLinkForm onSave={add}/>
-      <ListLinks links={links} />
+      <AddLinkForm onSave={add} />
+    <ListLinks links={links} onDelete ={Delete}/>
       </div>
     </>
   )

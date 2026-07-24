@@ -1,5 +1,6 @@
 
 export type RowProps ={
+    
     id: number,
     title: string,
     url: string,

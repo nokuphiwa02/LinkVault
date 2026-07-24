@@ -3,9 +3,10 @@ import  {type RowProps } from '../types/types'
 import './Row.module.css'
 
 
-
-
-export const Row:React.FC<RowProps> = ({title ,url ,description, tags}) => {
+type RowPropsWithDelete = RowProps & {
+    onDelete: (id: number) => void;
+  };
+export const Row:React.FC<RowPropsWithDelete> = ({id, title ,url ,description, tags, onDelete}) => {
   return (
    <>
       <tr>
@@ -25,9 +26,9 @@ export const Row:React.FC<RowProps> = ({title ,url ,description, tags}) => {
              <button>
              Edit
             </button>
-             <button>
-            Delete
-            </button>
+             <button onClick={() => onDelete(id)}>
+              Delete
+            </button >
         </td>
       </tr>
    </>

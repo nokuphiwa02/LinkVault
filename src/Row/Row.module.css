@@ -5,12 +5,16 @@ th{
   gap: 100px;
   height:100px;
   width: 100%;
+   background-color: black;
+  color: pink;
   flex-wrap: wrap;
  
 }
 td{
    padding: 50px ;
   gap: 100px;
+  font-size: large;
+  font-weight: bolder;
 }
 
 .link1 {
@@ -36,5 +40,7 @@ td{
 .btn {
   width: 25vw;
   gap: 50px;
+   background-color: black;
+  color: pink;
  /* border: 5PX solid red; */
 }

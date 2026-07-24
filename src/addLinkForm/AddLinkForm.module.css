@@ -4,6 +4,7 @@
   gap: 10px;
   background-color: pink;
   width: 95,5%;
+  flex-wrap: wrap;
   padding-left: 50px;
   padding-top: 50px;
   border: solid black;

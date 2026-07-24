@@ -2,5 +2,6 @@
 background-color: pink;
  width: 94%;
 height: 100vw;
+flex-wrap: wrap;
  border: solid black;
 }
