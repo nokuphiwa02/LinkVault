@@ -6,18 +6,39 @@ import type { RowProps } from "../types/types";
 
 type AddLinkFormProps = {
   onSave: (link: RowProps) => void;
+  onEdit: (link: RowProps) => void;
+  editingLink?: RowProps | null;
 };
 
-export const AddLinkForm: React.FC<AddLinkFormProps> = ({ onSave }) => {
-  const [title, setTitle] = useState("");
+export const AddLinkForm: React.FC<AddLinkFormProps> = ({
+  onSave,
+  onEdit,
+  editingLink,
+}) => {
+  const [title, setTitle] = useState(editingLink?.title ?? "");
 
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(editingLink?.url ?? "");
 
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState(
+    editingLink?.description ?? "",
+  );
 
-  const [tags, setTags] = useState("");
+  const [tags, setTags] = useState(editingLink?.tags ?? "");
 
   const handleSave = () => {
+   if (!title.trim() || !url.trim()) return;
+   
+     if (editingLink) {
+      const updatedLink: RowProps = {
+     id: editingLink.id, 
+      title,
+      url,
+      description,
+      tags,
+    };
+      onEdit(updatedLink);
+  }
+      else{
     const newLink: RowProps = {
       id: Date.now(),
       title,
@@ -25,7 +46,10 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({ onSave }) => {
       description,
       tags,
     };
-    onSave(newLink);
+     onSave(newLink);
+  }
+
+ 
     setTitle("");
     setUrl("");
     setDescription("");
@@ -66,6 +90,8 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({ onSave }) => {
         />
 
         <Input
+          type="url"
+          error="Please enter a valid URL"
           label="url:"
           value={url}
           placeholder="type/paste your link"
@@ -86,9 +112,8 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({ onSave }) => {
           onChange={handleInputChange_tags}
         />
 
-        <button onClick={handleSave} 
-        className={styles.btnAdd}>
-          Add Link
+        <button onClick={handleSave} className={styles.btnAdd}>
+         {editingLink ? "Update Link" : "Add Link"}
         </button>
       </div>
     </div>

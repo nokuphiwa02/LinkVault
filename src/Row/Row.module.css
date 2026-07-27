@@ -8,34 +8,54 @@ th {
   flex-wrap: wrap;
 }
 td {
-  padding: 130px ;
-  gap: 90px;
   font-size: large;
   font-weight: bolder;
+  padding: 100px;
+  gap: 60px;
+  flex-wrap: wrap;
 }
+
 
 .link1 {
   width: 15vw;
-  /* border: 5PX solid red; */
+ 
 }
 .link2 {
   width: 20vw;
-  /* border: 5PX solid red; */
+
 }
 
 .link3 {
   width: 25vw;
-  /* border: 5PX solid red; */
 }
 
 .link4 {
   width: 15vw;
-  /* border: 5PX solid red; */
 }
 
 .btn {
   width: 25vw;
   gap: 50px;
+}
+tbody{
+  
+  flex-wrap: wrap;
+   padding: 50px;
+ background-color: pink;
+}
 
-  /* border: 5PX solid red; */
+.buttons{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.editBtn{
+color: pink;
+background-color: black;
+}
+
+.deleteBtn{
+color: pink;
+background-color: black;
 }

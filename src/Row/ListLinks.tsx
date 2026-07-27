@@ -7,9 +7,10 @@ import styles from './Row.module.css'
 type ListLinksProps= {
     links: RowProps[],
     onDelete:(id: number) => void
+    onEdit:(id: number) => void
 }
 
-export const ListLinks:React.FC<ListLinksProps> = ({links ,onDelete}) => {
+export const ListLinks:React.FC<ListLinksProps> = ({links ,onDelete, onEdit}) => {
   return (
    <table >
     <thead>
@@ -33,7 +34,7 @@ export const ListLinks:React.FC<ListLinksProps> = ({links ,onDelete}) => {
      </th>
     </thead>
     <tbody>
-        {links.map((link) => (<Row key={link.id} {...link} onDelete={onDelete} />))}
+        {links.map((link) => (<Row key={link.id} {...link} onDelete={onDelete}  onEdit={onEdit}/>))}
     </tbody>
 
     
