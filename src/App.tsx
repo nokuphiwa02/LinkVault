@@ -42,9 +42,11 @@ function App() {
   };
 
   const updatedLink = (updatedLink: RowProps) => {
-    setLinks(
-      links.map((link) => (link.id === updatedLink.id ? updatedLink : link)),
-    );
+    setLinks((prevLinks) => {
+      const updatedLinks = prevLinks.map((link) => (link.id === updatedLink.id ? updatedLink : link));
+      localStorage.setItem("links", JSON.stringify(updatedLinks));
+      return updatedLinks;
+    });
   };
 
   return (

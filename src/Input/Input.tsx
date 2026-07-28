@@ -17,7 +17,7 @@ export const Input: React.FC<InputProps> = ({
   value,
   onChange,
   style,
-  error,
+ 
 }) => {
   return (
     <div>
@@ -29,7 +29,7 @@ export const Input: React.FC<InputProps> = ({
         onChange={onChange}
         style={style}
       />
-      {error && <span style={{ color: "red" }}>{error}</span>}
+      
     </div>
   );
 };

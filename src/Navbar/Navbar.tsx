@@ -4,6 +4,7 @@ export const Navbar = () => {
   return (
     <div className={styles.navTitle}>
       <h1>Link Vault</h1>
+      
     </div>
   );
 };

@@ -8,6 +8,7 @@
   padding-left: 50px;
   padding-top: 50px;
   border: solid black;
+  flex-wrap: wrap;
 }
 
 .linkTi {
@@ -32,6 +33,7 @@
   height: 40px;
   margin-left: 150px;
   margin-top: 30px;
+  flex-wrap: wrap;
   background-color: black;
   color: pink;
   cursor: pointer;
