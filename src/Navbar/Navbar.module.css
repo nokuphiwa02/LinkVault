@@ -4,7 +4,12 @@
  align-items: center;
  padding-left: 50px;
  flex-wrap: wrap;
- background-color: pink;
+ justify-content:center;
+ /* background-color: pink; */
  border:  solid black;
 }
 
+.SearchBar{
+   padding-left: 100px; 
+   width: 50vw;
+}

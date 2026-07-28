@@ -17,6 +17,7 @@ export const Row: React.FC<RowPropsWithDelete> = ({
 }) => {
   return (
     <>
+    
       <tr>
         <td>{title}</td>
         <td>{url}</td>
