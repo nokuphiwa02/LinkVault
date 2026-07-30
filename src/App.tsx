@@ -39,6 +39,7 @@ function App() {
     if (link) {
       setEditingLink(link);
     }
+
   };
 
   const updatedLink = (updatedLink: RowProps) => {
@@ -49,17 +50,26 @@ function App() {
     });
   };
 
+   const [ searchQ, setSearch] =useState('')
+   const filteredLinks= links.filter(link=>
+    link.title.toLowerCase().includes(searchQ.toLowerCase())|| 
+     link.url.toLowerCase().includes(searchQ.toLowerCase())|| 
+      link.description.toLowerCase().includes(searchQ.toLowerCase())|| 
+       link.tags.toLowerCase().includes(searchQ.toLowerCase())
+   );
+
+
   return (
     <>
       <div className="container">
-        <Navbar />
+        <Navbar onSearch= {setSearch}/>
         <AddLinkForm
           onSave={add}
           key={editingLink?.id ?? "add-link-form"}
             editingLink={editingLink} 
           onEdit={updatedLink}
         />
-        <ListLinks links={links} onDelete={Delete} onEdit={editLink} />
+        <ListLinks links={ filteredLinks} onDelete={Delete} onEdit={editLink} />
       </div>
     </>
   );
