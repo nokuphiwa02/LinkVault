@@ -4,24 +4,29 @@ th {
   gap: 60px;
   height: 100px;
   width: 100%;
+  border: 2px solid black;
   flex-wrap: wrap;
+  text-align: center;
 }
+table {
+  /* border-collapse: collapse; */
+}
+
 td {
   font-size: large;
   font-weight: bolder;
   padding: 60px;
   gap: 30px;
+  border: 2px solid black;
   flex-wrap: wrap;
+  text-align: center;
 }
-
 
 .link1 {
   width: 15vw;
- 
 }
 .link2 {
   width: 20vw;
-
 }
 
 .link3 {
@@ -36,34 +41,33 @@ td {
   width: 25vw;
   gap: 50px;
 }
-tbody{
-
+tbody {
   /* flex-wrap: wrap; */
-   /* padding: 50px; */
- /* background-color: pink; */
+  /* padding: 50px; */
+  /* background-color: pink; */
 }
 
-.buttons{
+.buttons {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.editBtn{
-color: pink;
-background-color: black;
+.editBtn {
+  color: pink;
+  background-color: black;
 }
 
-.deleteBtn{
-color: pink;
-background-color: black;
+.deleteBtn {
+  color: pink;
+  background-color: black;
 }
 
-@media( max-width: 600px) {
- th{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 5px;
- }
+@media (max-width: 600px) {
+  th {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
