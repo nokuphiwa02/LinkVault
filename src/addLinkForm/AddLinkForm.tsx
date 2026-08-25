@@ -80,10 +80,10 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({
   };
 
   return (
-    <div>
+    <div className={styles.addLinkContainer}>
       
       <div className={styles.addLink}>
-        <Input
+        <Input className={styles.tHead}
           label="title:"
           value={title}
           placeholder="write your tittle"

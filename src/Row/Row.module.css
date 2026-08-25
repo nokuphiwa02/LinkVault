@@ -10,6 +10,8 @@ th {
 }
 table {
   /* border-collapse: collapse; */
+  width: 100%;
+  border: 2px solid black;
 }
 
 td {
@@ -69,5 +71,21 @@ tbody {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 5px;
+  }
+  td {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  table {
+    width: 30vw;
+    gap: 5px;
+    margin-right: 80px;
+  }
+  td {
   }
 }
