@@ -26,30 +26,28 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({
   const [tags, setTags] = useState(editingLink?.tags ?? "");
 
   const handleSave = () => {
-   if (!title.trim() || !url.trim()) return;
-   
-     if (editingLink) {
-      const updatedLink: RowProps = {
-     id: editingLink.id, 
-      title,
-      url,
-      description,
-      tags,
-    };
-      onEdit(updatedLink);
-  }
-      else{
-    const newLink: RowProps = {
-      id: Date.now(),
-      title,
-      url,
-      description,
-      tags,
-    };
-     onSave(newLink);
-  }
+    if (!title.trim() || !url.trim()) return;
 
- 
+    if (editingLink) {
+      const updatedLink: RowProps = {
+        id: editingLink.id,
+        title,
+        url,
+        description,
+        tags,
+      };
+      onEdit(updatedLink);
+    } else {
+      const newLink: RowProps = {
+        id: Date.now(),
+        title,
+        url,
+        description,
+        tags,
+      };
+      onSave(newLink);
+    }
+
     setTitle("");
     setUrl("");
     setDescription("");
@@ -81,10 +79,10 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({
 
   return (
     <div className={styles.addLinkContainer}>
-      
       <div className={styles.addLink}>
-        <Input className={styles.tHead}
-          label="title:"
+        <Input
+          className={styles.tHead}
+          label="Title:"
           value={title}
           placeholder="write your tittle"
           onChange={handleInputChange_title}
@@ -93,28 +91,28 @@ export const AddLinkForm: React.FC<AddLinkFormProps> = ({
         <Input
           type="url"
           error="Please enter a valid URL"
-          label="url:"
+          label="Url:"
           value={url}
           placeholder="type/paste your link"
           onChange={handleInputChange_url}
         />
 
         <Input
-          label="description:"
+          label="Description:"
           value={description}
           placeholder="write your description"
           onChange={handleInputChange_description}
         />
 
         <Input
-          label="tags:"
+          label="Tags:"
           value={tags}
           placeholder="write your tag"
           onChange={handleInputChange_tags}
         />
 
         <button onClick={handleSave} className={styles.btnAdd}>
-         {editingLink ? "Update Link" : "Add Link"}
+          {editingLink ? "Update Link" : "Add Link"}
         </button>
       </div>
     </div>
