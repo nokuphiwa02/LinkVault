@@ -1,14 +1,14 @@
 .navTitle {
- width: 95,5%;
- display: flex;
- align-items: center;
- padding-left: 50px;
- flex-wrap: wrap;
- justify-content:center;
- border:  solid black;
+  width: 95, 5%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid black;
 }
 
-.SearchBar{
-   padding-left: 100px; 
-   width: 50vw;
+.SearchBar {
+  padding-left: 100px;
+  width: 50vw;
 }

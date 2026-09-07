@@ -39,37 +39,40 @@ function App() {
     if (link) {
       setEditingLink(link);
     }
-
   };
 
   const updatedLink = (updatedLink: RowProps) => {
     setLinks((prevLinks) => {
-      const updatedLinks = prevLinks.map((link) => (link.id === updatedLink.id ? updatedLink : link));
+      const updatedLinks = prevLinks.map((link) =>
+        link.id === updatedLink.id ? updatedLink : link,
+      );
       localStorage.setItem("links", JSON.stringify(updatedLinks));
       return updatedLinks;
     });
+    setEditingLink(null);
   };
 
-   const [ searchQ, setSearch] =useState('')
-   const filteredLinks= links.filter(link=>
-    link.title.toLowerCase().includes(searchQ.toLowerCase())|| 
-     link.url.toLowerCase().includes(searchQ.toLowerCase())|| 
-      link.description.toLowerCase().includes(searchQ.toLowerCase())|| 
-       link.tags.toLowerCase().includes(searchQ.toLowerCase())
-   );
-
+  const [searchQ, setSearch] = useState("");
+  const filteredLinks = links.filter(
+    (link) =>
+      link.title.toLowerCase().includes(searchQ.toLowerCase()) ||
+      link.url.toLowerCase().includes(searchQ.toLowerCase()) ||
+      link.description.toLowerCase().includes(searchQ.toLowerCase()) ||
+      link.tags.toLowerCase().includes(searchQ.toLowerCase()),
+  );
 
   return (
     <>
       <div className="container">
-        <Navbar onSearch= {setSearch}/>
+        <Navbar onSearch={setSearch} />
         <AddLinkForm
           onSave={add}
           key={editingLink?.id ?? "add-link-form"}
-            editingLink={editingLink} 
-          onEdit={updatedLink}
+          editingLink={editingLink}
+          onEdit={(updatedLink)}
+
         />
-        <ListLinks links={ filteredLinks} onDelete={Delete} onEdit={editLink} />
+        <ListLinks links={filteredLinks} onDelete={Delete} onEdit={editLink} />
       </div>
     </>
   );

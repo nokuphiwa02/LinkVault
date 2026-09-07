@@ -1,91 +1,70 @@
+
+table {
+  width: 50%;
+  background-color: pink;
+  border-collapse: collapse;
+}
+
 th {
   font-size: large;
   font-weight: bolder;
-  gap: 60px;
   height: 100px;
-  width: 100%;
   border: 2px solid black;
-  flex-wrap: wrap;
   text-align: center;
-}
-table {
-  /* border-collapse: collapse; */
-  width: 100%;
-  border: 2px solid black;
 }
 
 td {
   font-size: large;
   font-weight: bolder;
-  padding: 60px;
-  gap: 30px;
+  padding: 20px;
   border: 2px solid black;
-  flex-wrap: wrap;
   text-align: center;
 }
 
-.link1 {
-  width: 15vw;
-}
-.link2 {
-  width: 20vw;
-}
 
-.link3 {
-  width: 25vw;
-}
-
-.link4 {
-  width: 15vw;
-}
-
-.btn {
-  width: 25vw;
-  gap: 50px;
-}
-tbody {
-  /* flex-wrap: wrap; */
-  /* padding: 50px; */
-  /* background-color: pink; */
-}
+.link1 { width: 15vw; }
+.link2 { width: 20vw; }
+.link3 { width: 25vw; }
+.link4 { width: 15vw; }
 
 .buttons {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.editBtn {
+.editBtn, .deleteBtn {
   color: pink;
   background-color: black;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.deleteBtn {
-  color: pink;
-  background-color: black;
-}
 
 @media (max-width: 600px) {
-  th {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
+ 
+  table, thead, tbody, th, tr, td {
+    display: block;
+    width: 100% ; 
   }
-  td {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-}
 
-@media (max-width: 1024px) {
-  table {
-    width: 30vw;
-    gap: 5px;
-    margin-right: 80px;
+  
+  thead tr {
+    position: absolute;
+    
   }
+
+  
   td {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: left; 
+  }
+
+
+  .link1, .link2, .link3, .link4 {
+    width: 100%;
   }
 }
