@@ -1,75 +1,23 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://socialify.git.ci/nokuphiwa02/LinkVault/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="LinkVault" width="640" height="320" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📂 Project overview
+Link VaultLink Vault is a secure web application designed to save, organize, and manage your favorite internet links in one private dashboard. It replaces messy browser bookmarks by letting you categorize URLs with custom tags, categories, and personal notes.Users can instantly find saved links using a smart search bar and check for broken URLs automatically. Built with a modern tech stack like React and Node.js, it ensures your data is protected with secure user login accounts. This project provides a clean, cross-device solution for anyone looking to build a personalized digital library.
 
-## React Compiler
+## 🛠️ Tech StackFrontend 
+ReactBackend
+Node.jsLanguage 
+TypeScript
+Git & GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Installation and SetupFollow
+these steps to get a local copy of Link Vault up and running on your machine.PrerequisitesBefore you begin, ensure you have the following installed:GitNode.js (which includes npm)1. Clone the RepositoryOpen your terminal and run the following command to clone the project:bashgit clone https://github.com
 
-## Expanding the ESLint configuration
+## Install DependenciesYou will need to install the project dependencies
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Website 
+-https://github.com/nokuphiwa02/LinkVault
+-https://link-vault-iota-sand.vercel.app/
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
