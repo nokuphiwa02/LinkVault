@@ -11,11 +11,14 @@ Node.jsLanguage
 TypeScript
 Git & GitHub
 
-## 🚀 Installation and SetupFollow
-these steps to get a local copy of Link Vault up and running on your machine.PrerequisitesBefore you begin, ensure you have the following installed:GitNode.js (which includes npm)1. Clone the RepositoryOpen your terminal and run the following command to clone the project:bashgit clone https://github.com
-
-## Install DependenciesYou will need to install the project dependencies
-npm install
+## 🚀 Installations and commands
+-npm install
+-npm run dev
+-git init
+-git pull
+-git add .
+-git commit -m ""
+-git push
 
 ## Website 
 -https://github.com/nokuphiwa02/LinkVault
